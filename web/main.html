@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Solver</title>
+    <script src="eel.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src = "scp.js"></script>
+</head>
+<body>
+    <h1>Maze Solver</h1>
+
+    <select class="ele" name="" id="sel" onchange="Select()">
+        <option value="upload">Upload Image</option>
+        <option value="random">Random</option>
+    </select>
+
+    <div class="show" id="upload">
+        <input type="file" class="ele" id="inp" accept="image/*" onchange="Choose_a_Maze();"><br>
+        <button class="ele" onclick="Confirm_the_Maze()">Solve</button>
+    </div>
+    
+    <div class="hide" id="random">
+        <div>Please input two numbers between 4 and 40</div>
+        <input type="number" class="ele" id="row" max="50" min="5"><br>
+        <input type="number" class="ele" id="col" max="50" min="5"><br>
+        <button class="ele" onclick="Random_Maze()">Generate</button><br>
+    </div>
+    
+    
+    <div id="find_error"></div><br>
+    <img class="img" id="showimg" src="">
+    <img class="img" id="result" src=""><br>
+    
+    
+</body>
+</html>
